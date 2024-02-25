@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Bracket } from "./Views/Bracket/Bracket";
+import { Rankings } from "./Views/Rankings/Rankings";
+import { StatAdjustment } from "./Views/StatAdjustment/StatAdjustment";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <StatAdjustment />
+      <Rankings />
+      <Bracket />
     </div>
   );
 }

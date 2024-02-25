@@ -1,0 +1,11 @@
+.statAdjustment {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(100% / 10);
+}
