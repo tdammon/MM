@@ -4,7 +4,7 @@ import style from "./checkbox.module.css";
 export const Checkbox = ({ isChecked, name, setIsChecked, text }) => {
   return (
     <div className={style.checkbox}>
-      <label>{text}</label>
+      <label className={style.label}>{text}</label>
       <input
         type="checkbox"
         value={isChecked}

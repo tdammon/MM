@@ -4,56 +4,43 @@ import Slider from "@mui/material/Slider";
 
 import styles from "./stat-adjustment.module.css";
 
-export const StatAdjustment = () => {
-  const [weaselCount, setWeaselCount] = useState(false);
+import { statTitles } from "../../enums/statTitleEnums";
 
-  const [stats, setStats] = useState({
-    weaselCount: { enable: false, value: 50 },
-    defensiveWeasels: { enable: false, value: 50 },
-  });
-
+export const StatAdjustment = ({ setWeights, weights }) => {
   function handleCheck({ name, checked }) {
-    setWeaselCount(!weaselCount);
-    setStats({
-      ...stats,
-      [name]: { enable: checked, value: stats[name].value },
+    setWeights({
+      ...weights,
+      [name]: { enable: checked, value: 0 },
     });
   }
 
   const handleSlide = (event, newValue) => {
-    setStats({
-      ...stats,
+    setWeights({
+      ...weights,
       [event.target.name]: {
-        enable: stats[event.target.name].enable,
+        enable: weights[event.target.name].enable,
         value: newValue,
       },
     });
   };
 
   function displaySliders() {
-    return Object.keys(stats).map((key, index) => {
-      if (stats[key].enable) {
+    return Object.keys(weights).map((key, index) => {
+      if (weights[key].enable) {
+        console.log(statTitles[key]);
         return (
-          <div className={styles.slider}>
-            <label>{key}</label>
-            <Slider
-              name={key}
-              onChange={handleSlide}
-              valueLabelDisplay="auto"
-              max={100}
-              min={0}
-              // marks={[
-              //   {
-              //     value: 0,
-              //     label: "0",
-              //   },
-              //   {
-              //     value: 100,
-              //     label: "100",
-              //   },
-              // ]}
-              value={stats[key].value}
-            />
+          <div className={styles.slider} key={index}>
+            <label>{statTitles[key]}</label>
+            <div className={styles.sliderBarHolder}>
+              <Slider
+                name={key}
+                onChange={handleSlide}
+                valueLabelDisplay="auto"
+                max={100}
+                min={0}
+                value={weights[key].value}
+              />
+            </div>
           </div>
         );
       }
@@ -64,72 +51,77 @@ export const StatAdjustment = () => {
     <>
       <div className={styles.statAdjustment}>
         <Checkbox
-          isChecked={weaselCount}
-          name="weaselCount"
+          isChecked={weights.offensiveEfficiency.enable}
+          name="offensiveEfficiency"
           setIsChecked={(e) => handleCheck(e.target)}
-          text="Weasel Count"
+          text="Offensive Efficiency"
         />
         <Checkbox
-          isChecked={weaselCount}
-          name="defensiveWeasels"
+          isChecked={weights.defensiveEfficiency.enable}
+          name="defensiveEfficiency"
           setIsChecked={(e) => handleCheck(e.target)}
-          text="Defensive Weasel"
-        />
-        {/* <Checkbox
-          isChecked={weaselCount}
-          setIsChecked={setWeaselCount}
-          text="Weasel Count"
+          text="Defensive Efficiency"
         />
         <Checkbox
-          isChecked={weaselCount}
-          setIsChecked={setWeaselCount}
-          text="Weasel Count"
+          isChecked={weights.adjustedEfficiencyMargin.enable}
+          name="adjustedEfficiencyMargin"
+          setIsChecked={(e) => handleCheck(e.target)}
+          text="Adjusted Efficiency Margin"
         />
         <Checkbox
-          isChecked={weaselCount}
-          setIsChecked={setWeaselCount}
-          text="Weasel Count"
+          isChecked={weights.adjustedTempo.enable}
+          name="adjustedTempo"
+          setIsChecked={(e) => handleCheck(e.target)}
+          text="Adjusted Tempo"
         />
         <Checkbox
-          isChecked={weaselCount}
-          setIsChecked={setWeaselCount}
-          text="Weasel Count"
+          isChecked={weights.points.enable}
+          name="points"
+          setIsChecked={(e) => handleCheck(e.target)}
+          text="Points"
         />
         <Checkbox
-          isChecked={weaselCount}
-          setIsChecked={setWeaselCount}
-          text="Weasel Count"
+          isChecked={weights.rebounds.enable}
+          name="rebounds"
+          setIsChecked={(e) => handleCheck(e.target)}
+          text="Rebounds"
         />
         <Checkbox
-          isChecked={weaselCount}
-          setIsChecked={setWeaselCount}
-          text="Weasel Count"
+          isChecked={weights.fieldGoalPercentage.enable}
+          name="fieldGoalPercentage"
+          setIsChecked={(e) => handleCheck(e.target)}
+          text="Field Goal Percentage"
         />
         <Checkbox
-          isChecked={weaselCount}
-          setIsChecked={setWeaselCount}
-          text="Weasel Count"
+          isChecked={weights.opponentPoints.enable}
+          name="opponentPoints"
+          setIsChecked={(e) => handleCheck(e.target)}
+          text="Opponent Poins"
         />
         <Checkbox
-          isChecked={weaselCount}
-          setIsChecked={setWeaselCount}
-          text="Weasel Count"
+          isChecked={weights.opponentRebounds.enable}
+          name="opponentRebounds"
+          setIsChecked={(e) => handleCheck(e.target)}
+          text="Opponent Rebounds"
         />
         <Checkbox
-          isChecked={weaselCount}
-          setIsChecked={setWeaselCount}
-          text="Weasel Count"
+          isChecked={weights.opponentFieldGoalPercentage.enable}
+          name="opponentFieldGoalPercentage"
+          setIsChecked={(e) => handleCheck(e.target)}
+          text="Opponent Field Goal Percentage"
         />
         <Checkbox
-          isChecked={weaselCount}
-          setIsChecked={setWeaselCount}
-          text="Weasel Count"
+          isChecked={weights.pointsDifferential.enable}
+          name="pointsDifferential"
+          setIsChecked={(e) => handleCheck(e.target)}
+          text="Points Differential"
         />
         <Checkbox
-          isChecked={weaselCount}
-          setIsChecked={setWeaselCount}
-          text="Weasel Count"
-        /> */}
+          isChecked={weights.reboundsDifferential.enable}
+          name="reboundsDifferential"
+          setIsChecked={(e) => handleCheck(e.target)}
+          text="Rebounds Differential"
+        />
       </div>
       <div className={styles.statAdjustment}>{displaySliders()}</div>
     </>
