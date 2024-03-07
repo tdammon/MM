@@ -1,0 +1,22 @@
+.statSliders {
+  width: 50%;
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  /* flex-direction: column; */
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 50%;
+  height: 55px;
+}
+
+.sliderBarHolder {
+  width: 200px;
+}

@@ -3,19 +3,5 @@
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 20px;
-}
-
-.slider {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-basis: calc(100% / 4);
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.sliderBarHolder {
-  padding: 5px 20px;
-  width: 200px;
-  /* display: flex; */
+  max-width: 1200px;
 }

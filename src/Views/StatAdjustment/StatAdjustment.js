@@ -5,125 +5,92 @@ import Slider from "@mui/material/Slider";
 import styles from "./stat-adjustment.module.css";
 
 import { statTitles } from "../../enums/statTitleEnums";
+import { Chips } from "../../Components/Chips/Chips";
 
 export const StatAdjustment = ({ setWeights, weights }) => {
-  function handleCheck({ name, checked }) {
+  function handleCheck(name) {
     setWeights({
       ...weights,
-      [name]: { enable: checked, value: 0 },
-    });
-  }
-
-  const handleSlide = (event, newValue) => {
-    setWeights({
-      ...weights,
-      [event.target.name]: {
-        enable: weights[event.target.name].enable,
-        value: newValue,
-      },
-    });
-  };
-
-  function displaySliders() {
-    return Object.keys(weights).map((key, index) => {
-      if (weights[key].enable) {
-        console.log(statTitles[key]);
-        return (
-          <div className={styles.slider} key={index}>
-            <label>{statTitles[key]}</label>
-            <div className={styles.sliderBarHolder}>
-              <Slider
-                name={key}
-                onChange={handleSlide}
-                valueLabelDisplay="auto"
-                max={100}
-                min={0}
-                value={weights[key].value}
-              />
-            </div>
-          </div>
-        );
-      }
+      [name]: { enable: !weights[name].enable, value: 0 },
     });
   }
 
   return (
     <>
       <div className={styles.statAdjustment}>
-        <Checkbox
+        <Chips
           isChecked={weights.offensiveEfficiency.enable}
           name="offensiveEfficiency"
-          setIsChecked={(e) => handleCheck(e.target)}
+          setIsChecked={(e) => handleCheck("offensiveEfficiency")}
           text="Offensive Efficiency"
         />
-        <Checkbox
+        <Chips
           isChecked={weights.defensiveEfficiency.enable}
           name="defensiveEfficiency"
-          setIsChecked={(e) => handleCheck(e.target)}
+          setIsChecked={(e) => handleCheck("defensiveEfficiency")}
           text="Defensive Efficiency"
         />
-        <Checkbox
+        <Chips
           isChecked={weights.adjustedEfficiencyMargin.enable}
           name="adjustedEfficiencyMargin"
-          setIsChecked={(e) => handleCheck(e.target)}
+          setIsChecked={(e) => handleCheck("adjustedEfficiencyMargin")}
           text="Adjusted Efficiency Margin"
         />
-        <Checkbox
+        <Chips
           isChecked={weights.adjustedTempo.enable}
           name="adjustedTempo"
-          setIsChecked={(e) => handleCheck(e.target)}
+          setIsChecked={(e) => handleCheck("adjustedTempo")}
           text="Adjusted Tempo"
         />
-        <Checkbox
+        <Chips
           isChecked={weights.points.enable}
           name="points"
-          setIsChecked={(e) => handleCheck(e.target)}
+          setIsChecked={(e) => handleCheck("points")}
           text="Points"
         />
-        <Checkbox
+        <Chips
           isChecked={weights.rebounds.enable}
           name="rebounds"
-          setIsChecked={(e) => handleCheck(e.target)}
+          setIsChecked={(e) => handleCheck("rebounds")}
           text="Rebounds"
         />
-        <Checkbox
+        <Chips
           isChecked={weights.fieldGoalPercentage.enable}
           name="fieldGoalPercentage"
-          setIsChecked={(e) => handleCheck(e.target)}
+          setIsChecked={(e) => handleCheck("fieldGoalPercentage")}
           text="Field Goal Percentage"
         />
-        <Checkbox
+        <Chips
           isChecked={weights.opponentPoints.enable}
           name="opponentPoints"
-          setIsChecked={(e) => handleCheck(e.target)}
+          setIsChecked={(e) => handleCheck("opponentPoints")}
           text="Opponent Poins"
         />
-        <Checkbox
+        <Chips
           isChecked={weights.opponentRebounds.enable}
           name="opponentRebounds"
-          setIsChecked={(e) => handleCheck(e.target)}
+          setIsChecked={(e) => handleCheck("opponentRebounds")}
           text="Opponent Rebounds"
         />
-        <Checkbox
+        <Chips
           isChecked={weights.opponentFieldGoalPercentage.enable}
           name="opponentFieldGoalPercentage"
-          setIsChecked={(e) => handleCheck(e.target)}
+          setIsChecked={(e) => handleCheck("opponentFieldGoalPercentage")}
           text="Opponent Field Goal Percentage"
         />
-        <Checkbox
+        <Chips
           isChecked={weights.pointsDifferential.enable}
           name="pointsDifferential"
-          setIsChecked={(e) => handleCheck(e.target)}
+          setIsChecked={(e) => handleCheck("pointsDifferential")}
           text="Points Differential"
         />
-        <Checkbox
+        <Chips
           isChecked={weights.reboundsDifferential.enable}
           name="reboundsDifferential"
-          setIsChecked={(e) => handleCheck(e.target)}
+          setIsChecked={(e) => handleCheck("reboundsDifferential")}
           text="Rebounds Differential"
         />
       </div>
-      <div className={styles.statAdjustment}>{displaySliders()}</div>
     </>
   );
 };

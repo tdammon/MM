@@ -1,0 +1,8 @@
+.rankings {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  height: 2000px;
+}

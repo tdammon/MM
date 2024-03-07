@@ -3,6 +3,7 @@ import "./App.css";
 import { Bracket } from "./Views/Bracket/Bracket";
 import { Rankings } from "./Views/Rankings/Rankings";
 import { StatAdjustment } from "./Views/StatAdjustment/StatAdjustment";
+import { StatSliders } from "./Views/StatSliders/StatSliders";
 
 function App() {
   const [data, setData] = useState([]);
@@ -32,7 +33,10 @@ function App() {
   return (
     <div className="App">
       <StatAdjustment weights={weights} setWeights={setWeights} />
-      <Rankings data={data} weights={weights} setData={setData} />
+      <div style={{ display: "flex", width: "1200px" }}>
+        <StatSliders weights={weights} setWeights={setWeights} />
+        <Rankings data={data} weights={weights} setData={setData} />
+      </div>
       <Bracket />
     </div>
   );

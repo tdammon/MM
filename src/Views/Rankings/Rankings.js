@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./rankings.module.css";
 
 export const Rankings = ({ data, setData, weights }) => {
   function calculateRanking() {
@@ -36,5 +37,5 @@ export const Rankings = ({ data, setData, weights }) => {
     return myData;
   }
 
-  return <div>{calculateRanking()}</div>;
+  return <div className={styles.rankings}>{calculateRanking()}</div>;
 };
