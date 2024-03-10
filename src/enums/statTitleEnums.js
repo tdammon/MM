@@ -11,4 +11,8 @@ export const statTitles = {
   opponentFieldGoalPercentage: "Opponent Field Goal Percentage",
   pointsDifferential: "Points Differential",
   reboundsDifferential: "Rebounds Differential",
+  threePointPercentage: "Three Point Percentage",
+  assists: "Assists",
+  steals: "Steals",
+  turnovers: "Turnovers",
 };

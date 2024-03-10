@@ -90,6 +90,30 @@ export const StatAdjustment = ({ setWeights, weights }) => {
           setIsChecked={(e) => handleCheck("reboundsDifferential")}
           text="Rebounds Differential"
         />
+        <Chips
+          isChecked={weights.threePointPercentage.enable}
+          name="threePointPercentage"
+          setIsChecked={(e) => handleCheck("threePointPercentage")}
+          text="Three Point Percentage"
+        />
+        <Chips
+          isChecked={weights.assists.enable}
+          name="assists"
+          setIsChecked={(e) => handleCheck("assists")}
+          text="Assists"
+        />
+        <Chips
+          isChecked={weights.steals.enable}
+          name="steals"
+          setIsChecked={(e) => handleCheck("steals")}
+          text="Steals"
+        />
+        <Chips
+          isChecked={weights.turnovers.enable}
+          name="turnovers"
+          setIsChecked={(e) => handleCheck("turnovers")}
+          text="Turnovers"
+        />
       </div>
     </>
   );

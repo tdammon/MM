@@ -19,7 +19,6 @@ export const StatSliders = ({ setWeights, weights }) => {
   function displaySliders() {
     return Object.keys(weights).map((key, index) => {
       if (weights[key].enable) {
-        console.log(statTitles[key]);
         return (
           <div className={styles.slider} key={index}>
             <label>{statTitles[key]}</label>

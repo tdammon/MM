@@ -1,0 +1,12 @@
+.bracket {
+  display: flex;
+  flex-direction: column;
+}
+.bracketColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.bracketQuarter {
+  display: flex;
+}
