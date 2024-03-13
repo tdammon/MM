@@ -24,7 +24,7 @@ export const Rankings = ({ data, setData, weights }) => {
             element.threePointPercentage * weights.threePointPercentage.value +
             element.assists * weights.assists.value +
             element.steals * weights.steals.value -
-            element.turnovers * weights.turnovers.value
+            element.turnoverDifferential * weights.turnoverDifferential.value
         );
       });
       // setData({ ...data, teamPowerScore: tempData.teamPowerScore });
@@ -34,7 +34,7 @@ export const Rankings = ({ data, setData, weights }) => {
       .concat(tempData)
       .sort((a, b) => (a.teamPowerScore < b.teamPowerScore ? 1 : -1))
       .map((item, i) => (
-        <div key={i}>
+        <div className={styles.rankItem} key={i}>
           {item.name} : {item.teamPowerScore}
         </div>
       ));

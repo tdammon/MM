@@ -3,5 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  flex-direction: column;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+}
+
+.rankItem {
+  display: flex;
+  width: 50%;
 }

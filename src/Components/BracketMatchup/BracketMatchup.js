@@ -49,10 +49,12 @@ export const BracketMatchup = ({
       }}
     >
       <div className={style.highSeed} style={{ right: left ? "" : "0px" }}>
-        {highseed?.name}: {highseed?.teamPowerScore}
+        {highseed?.name}
+        {highseed?.name && ":"} {highseed?.teamPowerScore}
       </div>
       <div className={style.lowSeed} style={{ right: left ? "" : "0px" }}>
-        {lowseed?.name}: {lowseed?.teamPowerScore}
+        {lowseed?.name}
+        {lowseed?.name && ":"} {lowseed?.teamPowerScore}
       </div>
     </div>
   );

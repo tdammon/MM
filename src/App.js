@@ -23,7 +23,7 @@ function App() {
     threePointPercentage: { enable: false, value: 0 },
     assists: { enable: false, value: 0 },
     steals: { enable: false, value: 0 },
-    turnovers: { enable: false, value: 0 },
+    turnoverDifferential: { enable: false, value: 0 },
   });
 
   const [gameMatchups, setGameMatchups] = useState([
@@ -339,6 +339,31 @@ function App() {
 
   return (
     <div className="App">
+      <div
+        style={{
+          maxWidth: "1000px",
+          paddingBottom: "40px",
+          textAlign: "start",
+        }}
+      >
+        This app will build you a bracket based on the team statistics you feel
+        are most important.
+        <br></br>
+        <br></br>
+        Start by selecting the stats you feel are most important from the list
+        below. For each stat you select a corresponding slider will appear. Move
+        the slider to rank how important you feel this stat is (0 is not
+        important at all and 100 is maximally important).
+        <br></br>
+        <br></br>
+        As you adjust the sliders you will see a score appear next to the team
+        names. This is the power score calculated using each team's data, the
+        statistics categories you chose, and the assigned weights.
+        <br></br>
+        <br></br>
+        Finally hit the "Generate Bracket" button and the app will fill in your
+        bracket using the team power scores.
+      </div>
       <StatAdjustment weights={weights} setWeights={setWeights} />
       <div style={{ display: "flex", width: "1200px" }}>
         <StatSliders weights={weights} setWeights={setWeights} />

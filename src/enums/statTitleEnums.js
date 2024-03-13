@@ -14,5 +14,5 @@ export const statTitles = {
   threePointPercentage: "Three Point Percentage",
   assists: "Assists",
   steals: "Steals",
-  turnovers: "Turnovers",
+  turnoverDifferential: "Turnover Differential",
 };

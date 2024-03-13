@@ -109,10 +109,10 @@ export const StatAdjustment = ({ setWeights, weights }) => {
           text="Steals"
         />
         <Chips
-          isChecked={weights.turnovers.enable}
-          name="turnovers"
-          setIsChecked={(e) => handleCheck("turnovers")}
-          text="Turnovers"
+          isChecked={weights.turnoverDifferential.enable}
+          name="turnoverDifferential"
+          setIsChecked={(e) => handleCheck("turnoverDifferential")}
+          text="Turnover Differential"
         />
       </div>
     </>
