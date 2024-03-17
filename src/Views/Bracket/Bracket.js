@@ -168,8 +168,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
         <div className={styles.bracketQuarter}>
           <div className={styles.bracketColumn}>
             <BracketMatchup
-              highseed={getTeam("Purdue")}
-              lowseed={getTeam("Norfolk State")}
+              highseed={getTeam("UConn")}
+              lowseed={getTeam("Stetson")}
               round={1}
               id="1"
               setGameMatchups={setGameMatchups}
@@ -177,8 +177,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               left={true}
             />
             <BracketMatchup
-              highseed={getTeam("Texas Tech")}
-              lowseed={getTeam("Boise State")}
+              highseed={getTeam("Florida Atlantic")}
+              lowseed={getTeam("Northwestern")}
               round={1}
               id="2"
               setGameMatchups={setGameMatchups}
@@ -186,8 +186,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               left={true}
             />
             <BracketMatchup
-              highseed={getTeam("Clemson")}
-              lowseed={getTeam("Princeton")}
+              highseed={getTeam("San Diego State")}
+              lowseed={getTeam("UAB")}
               round={1}
               id="3"
               setGameMatchups={setGameMatchups}
@@ -195,8 +195,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               left={true}
             />
             <BracketMatchup
-              highseed={getTeam("Kentucky")}
-              lowseed={getTeam("Appalachian State")}
+              highseed={getTeam("Auburn")}
+              lowseed={getTeam("Yale")}
               round={1}
               id="4"
               setGameMatchups={setGameMatchups}
@@ -204,8 +204,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               left={true}
             />
             <BracketMatchup
-              highseed={getTeam("Wisconsin")}
-              lowseed={getTeam("Indiana State")}
+              highseed={getTeam("BYU")}
+              lowseed={getTeam("Duquesne")}
               round={1}
               id="5"
               setGameMatchups={setGameMatchups}
@@ -213,8 +213,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               left={true}
             />
             <BracketMatchup
-              highseed={getTeam("Marquette")}
-              lowseed={getTeam("Charleston")}
+              highseed={getTeam("Illinois")}
+              lowseed={getTeam("Morehead State")}
               round={1}
               id="6"
               setGameMatchups={setGameMatchups}
@@ -223,8 +223,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
             />
 
             <BracketMatchup
-              highseed={getTeam("Nevada")}
-              lowseed={getTeam("Mississippi State")}
+              highseed={getTeam("Washington State")}
+              lowseed={getTeam("Drake")}
               round={1}
               id="7"
               setGameMatchups={setGameMatchups}
@@ -233,7 +233,7 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
             />
             <BracketMatchup
               highseed={getTeam("ISU")}
-              lowseed={getTeam("Sam Houston")}
+              lowseed={getTeam("South Dakota State")}
               round={1}
               id="8"
               setGameMatchups={setGameMatchups}
@@ -282,8 +282,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
         <div className={styles.bracketQuarter}>
           <div className={styles.bracketColumn}>
             <BracketMatchup
-              highseed={getTeam("Tennessee")}
-              lowseed={getTeam("Stetson")}
+              highseed={getTeam("Houston")}
+              lowseed={getTeam("Longwood")}
               round={1}
               id="9"
               setGameMatchups={setGameMatchups}
@@ -291,8 +291,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               left={true}
             />
             <BracketMatchup
-              highseed={getTeam("Texas")}
-              lowseed={getTeam("Nebraska")}
+              highseed={getTeam("Nebraska")}
+              lowseed={getTeam("Texas A&M")}
               round={1}
               id="10"
               setGameMatchups={setGameMatchups}
@@ -300,8 +300,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               left={true}
             />
             <BracketMatchup
-              highseed={getTeam("San Diego State")}
-              lowseed={getTeam("Grand Canyon")}
+              highseed={getTeam("Wisconsin")}
+              lowseed={getTeam("James Madison")}
               round={1}
               id="11"
               setGameMatchups={setGameMatchups}
@@ -309,8 +309,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               left={true}
             />
             <BracketMatchup
-              highseed={getTeam("Illinois")}
-              lowseed={getTeam("UC Irvine")}
+              highseed={getTeam("Duke")}
+              lowseed={getTeam("Vermont")}
               round={1}
               id="12"
               setGameMatchups={setGameMatchups}
@@ -318,8 +318,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               left={true}
             />
             <BracketMatchup
-              highseed={getTeam("Utah State")}
-              lowseed={getTeam("Virginia")}
+              highseed={getTeam("Texas Tech")}
+              lowseed={getTeam("N.C. State")}
               round={1}
               id="13"
               setGameMatchups={setGameMatchups}
@@ -327,8 +327,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               left={true}
             />
             <BracketMatchup
-              highseed={getTeam("Baylor")}
-              lowseed={getTeam("Morehead State")}
+              highseed={getTeam("Kentucky")}
+              lowseed={getTeam("Oakland")}
               round={1}
               id="14"
               setGameMatchups={setGameMatchups}
@@ -337,8 +337,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
             />
 
             <BracketMatchup
-              highseed={getTeam("Gonzaga")}
-              lowseed={getTeam("Colorado State")}
+              highseed={getTeam("Florida")}
+              lowseed={getTeam("Boise State")}
               round={1}
               id="15"
               setGameMatchups={setGameMatchups}
@@ -346,8 +346,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               left={true}
             />
             <BracketMatchup
-              highseed={getTeam("Arizona")}
-              lowseed={getTeam("East Washington")}
+              highseed={getTeam("Marquette")}
+              lowseed={getTeam("Western Kentucky")}
               round={1}
               id="16"
               setGameMatchups={setGameMatchups}
@@ -432,8 +432,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
           </div>
           <div className={styles.bracketColumn}>
             <BracketMatchup
-              highseed={getTeam("UConn")}
-              lowseed={getTeam("Longwood")}
+              highseed={getTeam("Purdue")}
+              lowseed={getTeam("Grambling")}
               round={1}
               id="17"
               setGameMatchups={setGameMatchups}
@@ -441,8 +441,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               side={"left"}
             />
             <BracketMatchup
-              highseed={getTeam("Northwestern")}
-              lowseed={getTeam("Oklahoma")}
+              highseed={getTeam("Utah State")}
+              lowseed={getTeam("TCU")}
               round={1}
               id="18"
               setGameMatchups={setGameMatchups}
@@ -450,8 +450,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               side={"right"}
             />
             <BracketMatchup
-              highseed={getTeam("BYU")}
-              lowseed={getTeam("Richmond")}
+              highseed={getTeam("Gonzaga")}
+              lowseed={getTeam("McNeese State")}
               round={1}
               id="19"
               setGameMatchups={setGameMatchups}
@@ -459,7 +459,7 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               side={"right"}
             />
             <BracketMatchup
-              highseed={getTeam("Auburn")}
+              highseed={getTeam("Kansas")}
               lowseed={getTeam("Samford")}
               round={1}
               id="20"
@@ -469,7 +469,7 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
             />
             <BracketMatchup
               highseed={getTeam("South Carolina")}
-              lowseed={getTeam("New Mexico")}
+              lowseed={getTeam("Oregon")}
               round={1}
               id="21"
               setGameMatchups={setGameMatchups}
@@ -477,8 +477,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               side={"right"}
             />
             <BracketMatchup
-              highseed={getTeam("Kansas")}
-              lowseed={getTeam("Toledo")}
+              highseed={getTeam("Creighton")}
+              lowseed={getTeam("Akron")}
               round={1}
               id="22"
               setGameMatchups={setGameMatchups}
@@ -487,8 +487,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
             />
 
             <BracketMatchup
-              highseed={getTeam("Saint Mary's")}
-              lowseed={getTeam("Seton Hall")}
+              highseed={getTeam("Texas")}
+              lowseed={getTeam("Virginia")}
               round={1}
               id="23"
               setGameMatchups={setGameMatchups}
@@ -496,8 +496,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               side={"right"}
             />
             <BracketMatchup
-              highseed={getTeam("North Carolina")}
-              lowseed={getTeam("Quinnipiac")}
+              highseed={getTeam("Tennessee")}
+              lowseed={getTeam("Saint Peter's")}
               round={1}
               id="24"
               setGameMatchups={setGameMatchups}
@@ -546,8 +546,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
           </div>
           <div className={styles.bracketColumn}>
             <BracketMatchup
-              highseed={getTeam("Houston")}
-              lowseed={getTeam("South Dakota State")}
+              highseed={getTeam("North Carolina")}
+              lowseed={getTeam("Wagner")}
               round={1}
               id="25"
               setGameMatchups={setGameMatchups}
@@ -555,8 +555,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               side={"right"}
             />
             <BracketMatchup
-              highseed={getTeam("Michgan State")}
-              lowseed={getTeam("Florida Atlantic")}
+              highseed={getTeam("Mississippi State")}
+              lowseed={getTeam("Michigan State")}
               round={1}
               id="26"
               setGameMatchups={setGameMatchups}
@@ -564,8 +564,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               side={"right"}
             />
             <BracketMatchup
-              highseed={getTeam("Washington State")}
-              lowseed={getTeam("McNeese State")}
+              highseed={getTeam("Saint Mary's")}
+              lowseed={getTeam("Grand Canyon")}
               round={1}
               id="27"
               setGameMatchups={setGameMatchups}
@@ -574,7 +574,7 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
             />
             <BracketMatchup
               highseed={getTeam("Alabama")}
-              lowseed={getTeam("Vermont")}
+              lowseed={getTeam("Charleston")}
               round={1}
               id="28"
               setGameMatchups={setGameMatchups}
@@ -582,8 +582,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               side={"right"}
             />
             <BracketMatchup
-              highseed={getTeam("Florida")}
-              lowseed={getTeam("South Florida")}
+              highseed={getTeam("Clemson")}
+              lowseed={getTeam("New Mexico")}
               round={1}
               id="29"
               setGameMatchups={setGameMatchups}
@@ -591,8 +591,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               side={"right"}
             />
             <BracketMatchup
-              highseed={getTeam("Creighton")}
-              lowseed={getTeam("Oakland")}
+              highseed={getTeam("Baylor")}
+              lowseed={getTeam("Colgate")}
               round={1}
               id="30"
               setGameMatchups={setGameMatchups}
@@ -602,7 +602,7 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
 
             <BracketMatchup
               highseed={getTeam("Dayton")}
-              lowseed={getTeam("TCU")}
+              lowseed={getTeam("Nevada")}
               round={1}
               id="31"
               setGameMatchups={setGameMatchups}
@@ -610,8 +610,8 @@ export const Bracket = ({ data, gameMatchups, setGameMatchups }) => {
               side={"right"}
             />
             <BracketMatchup
-              highseed={getTeam("Duke")}
-              lowseed={getTeam("Colgate")}
+              highseed={getTeam("Arizona")}
+              lowseed={getTeam("Long Beach State")}
               round={1}
               id="32"
               setGameMatchups={setGameMatchups}

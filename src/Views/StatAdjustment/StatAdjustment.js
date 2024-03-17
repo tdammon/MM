@@ -64,7 +64,7 @@ export const StatAdjustment = ({ setWeights, weights }) => {
           isChecked={weights.opponentPoints.enable}
           name="opponentPoints"
           setIsChecked={(e) => handleCheck("opponentPoints")}
-          text="Opponent Poins"
+          text="Opponent Points"
         />
         <Chips
           isChecked={weights.opponentRebounds.enable}
